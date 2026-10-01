@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FINTAX 2026 · I Congreso Nororiental Financiero y Tributario | Cúcuta</title>
+  <meta name="description" content="FINTAX 2026: I Congreso Nororiental Financiero y Tributario. 5 y 6 de noviembre de 2026 en el Hotel Tonchalá, Cúcuta. Más de 24 expertos nacionales. Inversión: $300.000 COP. Aparta tu cupo por WhatsApp.">
+  <meta name="theme-color" content="#461C7C">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FINTAX 2026 · I Congreso Nororiental Financiero y Tributario">
+  <meta property="og:description" content="5 y 6 de noviembre de 2026 · Hotel Tonchalá, Cúcuta · +24 expertos nacionales · Inversión: $300.000 COP">
+  <meta property="og:image" content="assets/banner.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23461C7C'/%3E%3Ctext x='32' y='45' font-family='Arial, sans-serif' font-size='38' font-weight='900' text-anchor='middle' fill='%23F1FF2E'%3EF%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+  <style>
+    /* ============ Variables y base ============ */
+    :root {
+      --lima: #F1FF2E;
+      --morado: #461C7C;
+      --morado-oscuro: #2A0F4F;
+      --negro: #0A0A0A;
+      --blanco: #FFFFFF;
+      --crema: #FAFAF5;
+      --gris: #55524E;
+      --radio: 16px;
+      --sombra-dura: 6px 6px 0 var(--negro);
+      --max: 1120px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      background: var(--blanco);
+      color: var(--negro);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+
+    ul { list-style: none; }
+
+    a { color: inherit; }
+
+    :focus-visible {
+      outline: 3px solid var(--lima);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .seccion-lima :focus-visible,
+    .speakers-grid :focus-visible { outline-color: var(--morado); }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--lima);
+      color: var(--negro);
+      padding: .8rem 1.2rem;
+      font-weight: 800;
+      z-index: 200;
+      border-radius: 0 0 12px 0;
+    }
+    .skip-link:focus { left: 0; }
+
+    .contenedor {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* ============ Barra superior ============ */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--morado);
+      color: var(--blanco);
+      border-bottom: 3px solid var(--lima);
+    }
+    .topbar-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: .65rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .logo img {
+      height: 32px;
+      width: auto;
+      display: block;
+    }
+    .topbar nav { display: none; gap: 1.5rem; }
+    .topbar nav a {
+      color: var(--blanco);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: .95rem;
+    }
+    .topbar nav a:hover { color: var(--lima); text-decoration: underline; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .55rem;
+      font-weight: 800;
+      text-decoration: none;
+      border-radius: 999px;
+      border: 2px solid var(--negro);
+      cursor: pointer;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
+    }
+    .btn-lima {
+      background: var(--lima);
+      color: var(--negro);
+      box-shadow: 3px 3px 0 var(--negro);
+      padding: .6rem 1.2rem;
+      font-size: .92rem;
+      white-space: nowrap;
+    }
+    .btn-lima:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--negro); }
+    .btn-lima:active { transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--negro); }
+
+    /* ============ Hero ============ */
+    .hero {
+      background:
+        radial-gradient(900px 500px at 85% -10%, rgba(241, 255, 46, .14), transparent 60%),
+        linear-gradient(160deg, var(--morado) 0%, var(--morado-oscuro) 100%);
+      color: var(--blanco);
+      padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(3.5rem, 7vw, 5.5rem);
+    }
+    .hero-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+      display: grid;
+      gap: 2.8rem;
+      align-items: center;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: var(--lima);
+      color: var(--negro);
+      font-weight: 800;
+      font-size: .8rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: .5rem 1rem;
+      border-radius: 999px;
+      border: 2px solid var(--negro);
+      box-shadow: 3px 3px 0 var(--negro);
+      margin-bottom: 1.4rem;
+    }
+    .hero h1 {
+      margin-bottom: 1.4rem;
+      line-height: 1;
+    }
+    .hero h1 img {
+      width: clamp(280px, 52vw, 560px);
+      height: auto;
+      display: block;
+    }
+    .hero .lead {
+      font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+      max-width: 34ch;
+      color: rgba(255, 255, 255, .92);
+      margin-bottom: 1.6rem;
+    }
+    .hero .lead strong { color: var(--lima); }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .7rem;
+      margin-bottom: 2rem;
+    }
+    .chips li {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      border: 2px solid rgba(241, 255, 46, .65);
+      background: rgba(241, 255, 46, .1);
+      color: var(--blanco);
+      font-weight: 700;
+      font-size: .92rem;
+      padding: .55rem 1rem;
+      border-radius: 999px;
+    }
+    .chips svg { flex: none; color: var(--lima); }
+
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+    .btn-grande {
+      background: var(--lima);
+      color: var(--negro);
+      padding: 1rem 1.8rem;
+      font-size: 1.05rem;
+      box-shadow: 5px 5px 0 var(--negro);
+    }
+    .btn-grande:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--negro); }
+    .btn-grande:active { transform: translate(1px, 1px); box-shadow: 2px 2px 0 var(--negro); }
+    .btn-fantasma {
+      background: transparent;
+      color: var(--blanco);
+      border: 2px solid var(--blanco);
+      padding: 1rem 1.8rem;
+      font-size: 1.05rem;
+      box-shadow: none;
+    }
+    .btn-fantasma:hover { background: var(--blanco); color: var(--morado); transform: none; }
+
+    .hero-poster {
+      justify-self: center;
+      max-width: 400px;
+      width: 100%;
+    }
+    .hero-poster img {
+      width: 100%;
+      border: 5px solid var(--lima);
+      border-radius: var(--radio);
+      box-shadow: 12px 12px 0 var(--negro);
+      transform: rotate(-1.4deg);
+      background: var(--morado-oscuro);
+    }
+    .hero-poster figcaption {
+      margin-top: 1.1rem;
+      text-align: center;
+      font-size: .85rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, .75);
+    }
+
+    /* ============ Marquee ============ */
+    .marquee {
+      background: var(--negro);
+      color: var(--lima);
+      border-top: 3px solid var(--negro);
+      overflow: hidden;
+      white-space: nowrap;
+      padding: .85rem 0;
+      font-weight: 800;
+      font-size: .95rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .marquee-track { display: inline-flex; animation: desfile 24s linear infinite; }
+    .marquee-track span { padding-right: 2.5rem; }
+    @keyframes desfile { to { transform: translateX(-50%); } }
+
+    /* ============ Secciones comunes ============ */
+    .seccion { padding: clamp(3.8rem, 8vw, 6rem) 0; }
+    .seccion-tag {
+      display: inline-block;
+      background: var(--negro);
+      color: var(--lima);
+      font-weight: 800;
+      font-size: .78rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: .45rem .9rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+    .seccion h2 {
+      font-size: clamp(1.9rem, 5vw, 2.9rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+    .seccion-intro { max-width: 60ch; font-size: 1.05rem; margin-bottom: 2.4rem; }
+
+    /* ============ Ponentes ============ */
+    .speakers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(158px, 1fr));
+      gap: 1.1rem;
+    }
+    .speaker-card a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: .65rem;
+      background: var(--blanco);
+      border: 2px solid var(--negro);
+      border-radius: var(--radio);
+      box-shadow: 4px 4px 0 var(--negro);
+      padding: 1.4rem .9rem 1.2rem;
+      height: 100%;
+      text-decoration: none;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .speaker-card a:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 7px 7px 0 var(--morado);
+    }
+    .speaker-card img {
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--lima);
+      outline: 2px solid var(--negro);
+      background: var(--crema);
+    }
+    .speaker-card h3 { font-size: .98rem; font-weight: 800; line-height: 1.25; overflow-wrap: break-word; }
+    .speaker-card .rol { font-size: .8rem; color: var(--gris); line-height: 1.35; }
+    .speaker-card .handle {
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--morado);
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      max-width: 100%;
+    }
+    .speaker-card.mas a {
+      background: var(--crema);
+      border-style: dashed;
+      justify-content: center;
+      box-shadow: none;
+    }
+    .speaker-card.mas a:hover { transform: none; box-shadow: none; border-color: var(--morado); }
+    .speaker-card.mas .mas-num {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--morado);
+      line-height: 1;
+    }
+
+    /* ============ Lugar ============ */
+    .seccion-morada { background: var(--morado); color: var(--blanco); }
+    .seccion-morada .seccion-tag { background: var(--lima); color: var(--negro); }
+    .lugar-grid { display: grid; gap: 2.2rem; align-items: center; }
+    .seccion-morada .seccion-intro, .lugar-texto p { color: rgba(255, 255, 255, .88); }
+    .btn-blanco {
+      background: var(--blanco);
+      color: var(--negro);
+      padding: .95rem 1.6rem;
+      font-size: 1rem;
+      box-shadow: 5px 5px 0 var(--lima);
+    }
+    .btn-blanco:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--lima); }
+    .mapa iframe {
+      width: 100%;
+      height: 300px;
+      border: 4px solid var(--lima);
+      border-radius: var(--radio);
+      box-shadow: 8px 8px 0 var(--negro);
+      display: block;
+    }
+
+    /* ============ Inversión ============ */
+    .seccion-negra { background: var(--negro); color: var(--blanco); text-align: center; }
+    .seccion-negra .seccion-tag { background: var(--lima); color: var(--negro); }
+    .seccion-negra .seccion-intro, .precio-detalle { color: rgba(255, 255, 255, .85); }
+    .precio {
+      font-size: clamp(3.4rem, 11vw, 6rem);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1;
+      color: var(--lima);
+      margin: .5rem 0 .4rem;
+    }
+    .precio small { font-size: .35em; font-weight: 800; letter-spacing: .02em; }
+    .razones {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.1rem;
+      margin: 2.6rem 0;
+      text-align: left;
+    }
+    .razones li {
+      border: 2px solid rgba(241, 255, 46, .5);
+      border-radius: var(--radio);
+      padding: 1.3rem 1.2rem;
+      background: rgba(241, 255, 46, .06);
+    }
+    .razones svg { color: var(--lima); margin-bottom: .7rem; }
+    .razones h3 { font-size: 1.02rem; font-weight: 800; margin-bottom: .3rem; }
+    .razones p { font-size: .88rem; color: rgba(255, 255, 255, .8); }
+    .precio-nota { font-size: .88rem; color: rgba(255, 255, 255, .65); margin-top: 1.4rem; }
+
+    /* ============ Contacto ============ */
+    .seccion-lima { background: var(--lima); color: var(--negro); text-align: center; }
+    .seccion-lima .seccion-tag { background: var(--negro); color: var(--lima); }
+    .seccion-lima .seccion-intro { margin: 0 auto 2rem; color: var(--negro); }
+    .seccion-lima .hero-cta { justify-content: center; }
+    .btn-negro {
+      background: var(--negro);
+      color: var(--lima);
+      padding: 1rem 1.8rem;
+      font-size: 1.05rem;
+      box-shadow: 5px 5px 0 var(--morado);
+    }
+    .btn-negro:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--morado); }
+    .btn-borde-negro {
+      background: transparent;
+      color: var(--negro);
+      border: 2px solid var(--negro);
+      padding: 1rem 1.8rem;
+      font-size: 1.05rem;
+      box-shadow: none;
+    }
+    .btn-borde-negro:hover { background: var(--negro); color: var(--lima); transform: none; }
+
+    /* ============ Footer ============ */
+    footer {
+      background: var(--negro);
+      color: rgba(255, 255, 255, .8);
+      text-align: center;
+      padding: 2.6rem 1.25rem;
+      border-top: 3px solid var(--lima);
+    }
+    footer .footer-logo { display: flex; justify-content: center; margin-bottom: .6rem; }
+    footer .footer-logo img { height: 64px; width: auto; display: block; }
+    footer p { font-size: .88rem; margin-top: .45rem; }
+    footer a { color: var(--lima); font-weight: 700; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ============ Botón flotante WhatsApp ============ */
+    .wa-float {
+      position: fixed;
+      right: 1.15rem;
+      bottom: 1.15rem;
+      z-index: 150;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--lima);
+      color: var(--negro);
+      border: 2px solid var(--negro);
+      box-shadow: 4px 4px 0 var(--negro);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .wa-float:hover { transform: translate(-2px, -2px) scale(1.04); box-shadow: 6px 6px 0 var(--negro); }
+    .wa-float svg { width: 30px; height: 30px; }
+
+    /* ============ Animación de aparición ============ */
+    .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .5s ease, transform .5s ease; }
+    .js .reveal.visible { opacity: 1; transform: none; }
+    .js .reveal:nth-child(2n) { transition-delay: .08s; }
+    .js .reveal:nth-child(3n) { transition-delay: .16s; }
+
+    /* ============ Responsive ============ */
+    @media (min-width: 640px) {
+      .logo img { height: 40px; }
+      .mapa iframe { height: 380px; }
+    }
+    @media (min-width: 900px) {
+      .topbar nav { display: flex; }
+      .hero-inner { grid-template-columns: 1.15fr .85fr; gap: 3.5rem; }
+      .lugar-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+    }
+
+    /* ============ Accesibilidad: menos movimiento ============ */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .marquee-track { animation: none; }
+      .js .reveal { opacity: 1; transform: none; transition: none; }
+      .btn, .speaker-card a, .wa-float { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="#inicio" aria-label="Fintax 2026, volver al inicio">
+        <img src="assets/logo-corto.png" alt="Fintax 2026" width="902" height="265">
+      </a>
+      <nav aria-label="Secciones de la página">
+        <a href="#ponentes">Ponentes</a>
+        <a href="#lugar">Lugar</a>
+        <a href="#inversion">Inversión</a>
+      </nav>
+      <a class="btn btn-lima" href="https://wa.me/573177910537?text=Hola%2C%20quiero%20apartar%20mi%20cupo%20para%20el%20Congreso%20FINTAX%202026%20%285%20y%206%20de%20noviembre%2C%20Hotel%20Tonchal%C3%A1%2C%20C%C3%BAcuta%29" target="_blank" rel="noopener">🎟️ Aparta tu cupo</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+      <div class="hero-inner">
+        <div class="hero-texto">
+          <p class="badge">🏛️ I Congreso Nororiental Financiero y Tributario</p>
+          <h1 id="titulo-principal" class="hero-titulo">
+            <img src="assets/logo-corto.png" alt="FINTAX" width="902" height="265">
+          </h1>
+          <p class="lead">Dos días para dar un salto en tu actualización financiera y tributaria junto a <strong>+24 expertos nacionales</strong>, en el corazón del nororiente colombiano.</p>
+          <ul class="chips">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
+              5 y 6 de noviembre de 2026
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Hotel Tonchalá · Cúcuta
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9a2 2 0 0 1 2-2h1.5L8 5h8l1.5 2H19a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><circle cx="12" cy="13.5" r="3.5"/></svg>
+              Inversión: $300.000 COP
+            </li>
+          </ul>
+          <div class="hero-cta">
+            <a class="btn btn-grande" href="https://wa.me/573177910537?text=Hola%2C%20quiero%20apartar%20mi%20cupo%20para%20el%20Congreso%20FINTAX%202026%20%285%20y%206%20de%20noviembre%2C%20Hotel%20Tonchal%C3%A1%2C%20C%C3%BAcuta%29" target="_blank" rel="noopener">Aparta tu cupo por WhatsApp
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-fantasma" href="#ponentes">Conoce a los ponentes</a>
+          </div>
+        </div>
+        <figure class="hero-poster">
+          <img src="assets/banner.jpg" alt="Póster oficial del I Congreso Nororiental Financiero y Tributario Fintax: 5 y 6 de noviembre de 2026, Hotel Tonchalá, Cúcuta." width="640" height="640">
+          <figcaption>Póster oficial del evento · @congresofintax</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Franja en movimiento -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>✦ FINTAX 2026 ✦ 5 Y 6 DE NOVIEMBRE ✦ HOTEL TONCHALÁ ✦ CÚCUTA ✦ +24 EXPERTOS NACIONALES ✦ I CONGRESO NORORIENTAL FINANCIERO Y TRIBUTARIO ✦&nbsp;</span>
+        <span>✦ FINTAX 2026 ✦ 5 Y 6 DE NOVIEMBRE ✦ HOTEL TONCHALÁ ✦ CÚCUTA ✦ +24 EXPERTOS NACIONALES ✦ I CONGRESO NORORIENTAL FINANCIERO Y TRIBUTARIO ✦&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ================= PONENTES ================= -->
+    <section id="ponentes" class="seccion" aria-labelledby="titulo-ponentes">
+      <div class="contenedor">
+        <p class="seccion-tag">Ponentes</p>
+        <h2 id="titulo-ponentes">Los primeros expertos confirmados</h2>
+        <p class="seccion-intro">Estos son los nombres que ya están en el cartel del FINTAX. La organización seguirá anunciando más ponentes en las próximas semanas. Toca una tarjeta para ver el perfil de cada experto en Instagram.</p>
+
+        <ul class="speakers-grid">
+          <li class="speaker-card reveal">
+            <a href="https://www.instagram.com/christianjunotax/" target="_blank" rel="noopener">
+              <img src="assets/speakers/christianjunotax.jpg" alt="Foto de Christian Junot" width="150" height="150" loading="lazy">
+              <h3>Christian Junot</h3>
+              <p class="rol">Tributarista · Exdirectivo DIAN</p>
+              <span class="handle">@christianjunotax</span>
+            </a>
+          </li>
+          <li class="speaker-card reveal">
+            <a href="https://www.instagram.com/yosoyyennysaldarriaga/" target="_blank" rel="noopener">
+              <img src="assets/speakers/yosoyyennysaldarriaga.jpg" alt="Foto de Yenny Saldarriaga" width="150" height="150" loading="lazy">
+              <h3>Yenny Saldarriaga</h3>
+              <p class="rol">Tributarista · Autora · Speaker</p>
+              <span class="handle">@yosoyyennysaldarriaga</span>
+            </a>
+          </li>
+          <li class="speaker-card reveal">
+            <a href="https://www.instagram.com/samuelmorales10/" target="_blank" rel="noopener">
+              <img src="assets/speakers/samuelmorales10.jpg" alt="Foto de Samuel David Morales" width="150" height="150" loading="lazy">
+              <h3>Samuel David Morales</h3>
+              <p class="rol">Abogado tributarista · Exsecretario de Hacienda</p>
+              <span class="handle">@samuelmorales10</span>
+            </a>
+          </li>
+          <li class="speaker-card reveal">
+            <a href="https://www.instagram.com/katiuskavargash/" target="_blank" rel="noopener">
+              <img src="assets/speakers/katiuskavargash.jpg" alt="Foto de Katiuska Vargas" width="150" height="150" loading="lazy">
+              <h3>Katiuska Vargas</h3>
+              <p class="rol">Experta invitada</p>
+              <span class="handle">@katiuskavargash</span>
+            </a>
+          </li>
+          <li class="speaker-card reveal">
+            <a href="https://www.instagram.com/sandrapaboncontadora/" target="_blank" rel="noopener">
+              <img src="assets/speakers/sandrapaboncontadora.jpg" alt="Foto de Sandra Milena Pabón" width="150" height="150" loading="lazy">
+              <h3>Sandra Milena Pabón</h3>
+              <p class="rol">Contadora pública · Esp. en Tributaria</p>
+              <span class="handle">@sandrapaboncontadora</span>
+            </a>
+          </li>
+          <li class="speaker-card reveal">
+            <a href="https://www.instagram.com/leydervalenciaalfaro/" target="_blank" rel="noopener">
+              <img src="assets/speakers/leydervalenciaalfaro.jpg" alt="Foto de Leider Valencia" width="150" height="150" loading="lazy">
+              <h3>Leider Valencia</h3>
+              <p class="rol">Contador público · Mg. en Tributación</p>
+              <span class="handle">@leydervalenciaalfaro</span>
+            </a>
+          </li>
+          <li class="speaker-card reveal">
+            <a href="https://www.instagram.com/impuestosconbotas/" target="_blank" rel="noopener">
+              <img src="assets/speakers/impuestosconbotas.jpg" alt="Logo de Impuestos con Botas, marca de Carlos Guerra" width="150" height="150" loading="lazy">
+              <h3>Carlos Guerra</h3>
+              <p class="rol">Autor y conferencista tributario</p>
+              <span class="handle">@impuestosconbotas</span>
+            </a>
+          </li>
+          <li class="speaker-card reveal">
+            <a href="https://www.instagram.com/audreyrodriguezcontadora/" target="_blank" rel="noopener">
+              <img src="assets/speakers/audreyrodriguezcontadora.jpg" alt="Foto de Audrey Rodríguez" width="150" height="150" loading="lazy">
+              <h3>Audrey Rodríguez</h3>
+              <p class="rol">Contadora · Seguridad Social · CEO Lexacty</p>
+              <span class="handle">@audreyrodriguezcontadora</span>
+            </a>
+          </li>
+          <li class="speaker-card reveal">
+            <a href="https://www.instagram.com/marielenasalcedocontadora/" target="_blank" rel="noopener">
+              <img src="assets/speakers/marielenasalcedocontadora.jpg" alt="Foto de Marielena Salcedo" width="150" height="150" loading="lazy">
+              <h3>Marielena Salcedo</h3>
+              <p class="rol">Contadora · Tributación y formalización</p>
+              <span class="handle">@marielenasalcedocontadora</span>
+            </a>
+          </li>
+          <li class="speaker-card reveal">
+            <a href="https://www.instagram.com/luciatuasesortributario/" target="_blank" rel="noopener">
+              <img src="assets/speakers/luciatuasesortributario.jpg" alt="Foto de Tu Asesor Tributario" width="150" height="150" loading="lazy">
+              <h3>Tu Asesor Tributario</h3>
+              <p class="rol">Auditoría forense e impuestos</p>
+              <span class="handle">@luciatuasesortributario</span>
+            </a>
+          </li>
+          <li class="speaker-card mas reveal">
+            <a href="https://www.instagram.com/congresofintax/" target="_blank" rel="noopener">
+              <span class="mas-num">+14</span>
+              <h3>Y siguen sumándose…</h3>
+              <p class="rol">El cartel completo tendrá más de 24 expertos nacionales.</p>
+              <span class="handle">Sigue los anuncios en @congresofintax</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= LUGAR ================= -->
+    <section id="lugar" class="seccion seccion-morada" aria-labelledby="titulo-lugar">
+      <div class="contenedor lugar-grid">
+        <div class="lugar-texto reveal">
+          <p class="seccion-tag">El lugar</p>
+          <h2 id="titulo-lugar">Hotel Tonchalá · Cúcuta</h2>
+          <p>El FINTAX se vivirá en el Hotel Tonchalá, en Cúcuta, Norte de Santander: el escenario ideal para dos jornadas de conferencias, aprendizaje y networking con la comunidad contable y financiera del nororiente colombiano.</p>
+          <p style="margin: 1.6rem 0;">📍 Cúcuta, Norte de Santander, Colombia</p>
+          <a class="btn btn-blanco" href="https://www.google.com/maps/search/?api=1&query=Hotel+Tonchal%C3%A1+C%C3%BAcuta" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Ver en Google Maps
+          </a>
+        </div>
+        <div class="mapa reveal">
+          <iframe
+            title="Mapa con la ubicación del Hotel Tonchalá en Cúcuta"
+            src="https://maps.google.com/maps?q=Hotel%20Tonchal%C3%A1%2C%20C%C3%BAcuta&z=15&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INVERSIÓN ================= -->
+    <section id="inversion" class="seccion seccion-negra" aria-labelledby="titulo-inversion">
+      <div class="contenedor">
+        <p class="seccion-tag">Inversión</p>
+        <h2 id="titulo-inversion">Aparta tu cupo</h2>
+        <p class="seccion-intro" style="margin-left:auto; margin-right:auto;">Inscripción a las dos jornadas del congreso · 5 y 6 de noviembre de 2026.</p>
+        <p class="precio">$300.000 <small>COP</small></p>
+        <p class="precio-detalle">Cupos limitados · Reserva por WhatsApp</p>
+
+        <ul class="razones">
+          <li class="reveal">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M4.2 7.8l2.1 2.1M19.8 7.8l-2.1 2.1M3 13h3M18 13h3M4.2 18.2l2.1-2.1M19.8 18.2l-2.1-2.1M12 18v3"/><circle cx="12" cy="13" r="4"/></svg>
+            <h3>Actualización total</h3>
+            <p>Lo último en finanzas y tributación, directo de la voz de los expertos.</p>
+          </li>
+          <li class="reveal">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+            <h3>+24 expertos nacionales</h3>
+            <p>Conferencistas de referencia en impuestos, contabilidad y nómina.</p>
+          </li>
+          <li class="reveal">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0Z"/><path d="M16 5.6a3.2 3.2 0 0 1 0 4.8M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></svg>
+            <h3>Networking regional</h3>
+            <p>Conecta con contadores, abogados y empresarios de toda la región.</p>
+          </li>
+        </ul>
+
+        <a class="btn btn-grande" href="https://wa.me/573177910537?text=Hola%2C%20quiero%20apartar%20mi%20cupo%20para%20el%20Congreso%20FINTAX%202026%20%285%20y%206%20de%20noviembre%2C%20Hotel%20Tonchal%C3%A1%2C%20C%C3%BAcuta%29" target="_blank" rel="noopener">Quiero mi cupo ahora</a>
+        <p class="precio-nota">¿Descuentos por grupos, pagos o facturación? Escríbenos por WhatsApp y te ayudamos. 💬</p>
+      </div>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section id="contacto" class="seccion seccion-lima" aria-labelledby="titulo-contacto">
+      <div class="contenedor">
+        <p class="seccion-tag">Únete</p>
+        <h2 id="titulo-contacto">¿Listo para vivir el FINTAX?</h2>
+        <p class="seccion-intro">Aparta tu cupo hoy por WhatsApp o síguenos en Instagram para enterarte de los nuevos ponentes y sorpresas del congreso.</p>
+        <div class="hero-cta">
+          <a class="btn btn-negro" href="https://wa.me/573177910537?text=Hola%2C%20quiero%20apartar%20mi%20cupo%20para%20el%20Congreso%20FINTAX%202026%20%285%20y%206%20de%20noviembre%2C%20Hotel%20Tonchal%C3%A1%2C%20C%C3%BAcuta%29" target="_blank" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.597.149-.176.446-.459.867-.597 1.043-.273.422-.42.35-.793.124-.373-.176-1.577-.582-3.001-1.852-1.111-.99-1.859-2.208-2.078-2.581-.218-.373-.023-.575.149-.723.324-.302.446-.497.67-.743.224-.246.298-.422.446-.697.149-.273.074-.512-.075-.76-.149-.248-.668-1.612-.916-2.208-.248-.596-.497-.52-.668-.52-.174 0-.372-.025-.57-.025-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.711.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347Z"/><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.892c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.05 12.05 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.335 11.949-11.892 0-3.176-1.24-6.165-3.48-8.454ZM12.05 21.785h-.004a9.87 9.87 0 0 1-5.036-1.378l-.361-.214-3.741.981.999-3.648-.235-.374a9.86 9.86 0 0 1-1.511-5.26c.002-5.45 4.455-9.885 9.99-9.885 2.663 0 5.166 1.038 7.032 2.923a9.83 9.83 0 0 1 2.913 6.965c-.003 5.45-4.456 9.885-9.846 9.885Z"/></svg>
+            Escríbenos por WhatsApp
+          </a>
+          <a class="btn btn-borde-negro" href="https://www.instagram.com/congresofintax/" target="_blank" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.4"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg>
+            @congresofintax
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p class="footer-logo"><img src="assets/logo.png" alt="Fintax 2026" width="902" height="321"></p>
+    <p>I Congreso Nororiental Financiero y Tributario · Convoca: <a href="https://www.instagram.com/lexactysas/" target="_blank" rel="noopener">Lexacty SAS</a></p>
+    <p>Hotel Tonchalá · Cúcuta, Colombia · <a href="https://www.instagram.com/congresofintax/" target="_blank" rel="noopener">@congresofintax</a></p>
+    <p style="margin-top: 1rem; opacity: .55;">© 2026 FINTAX. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="wa-float" href="https://wa.me/573177910537?text=Hola%2C%20quiero%20apartar%20mi%20cupo%20para%20el%20Congreso%20FINTAX%202026%20%285%20y%206%20de%20noviembre%2C%20Hotel%20Tonchal%C3%A1%2C%20C%C3%BAcuta%29" target="_blank" rel="noopener" aria-label="Apartar cupo por WhatsApp: abre una conversación con el congreso FINTAX">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.597.149-.176.446-.459.867-.597 1.043-.273.422-.42.35-.793.124-.373-.176-1.577-.582-3.001-1.852-1.111-.99-1.859-2.208-2.078-2.581-.218-.373-.023-.575.149-.723.324-.302.446-.497.67-.743.224-.246.298-.422.446-.697.149-.273.074-.512-.075-.76-.149-.248-.668-1.612-.916-2.208-.248-.596-.497-.52-.668-.52-.174 0-.372-.025-.57-.025-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.711.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347Z"/><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.892c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.05 12.05 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.335 11.949-11.892 0-3.176-1.24-6.165-3.48-8.454ZM12.05 21.785h-.004a9.87 9.87 0 0 1-5.036-1.378l-.361-.214-3.741.981.999-3.648-.235-.374a9.86 9.86 0 0 1-1.511-5.26c.002-5.45 4.455-9.885 9.99-9.885 2.663 0 5.166 1.038 7.032 2.923a9.83 9.83 0 0 1 2.913 6.965c-.003 5.45-4.456 9.885-9.846 9.885Z"/></svg>
+  </a>
+
+  <script>
+    // Animación de aparición al hacer scroll (respeta prefers-reduced-motion vía CSS)
+    (function () {
+      var elementos = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        elementos.forEach(function (el) { el.classList.add('visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entradas) {
+        entradas.forEach(function (entrada) {
+          if (entrada.isIntersecting) {
+            entrada.target.classList.add('visible');
+            io.unobserve(entrada.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      elementos.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
