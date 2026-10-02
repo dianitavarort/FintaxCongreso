@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dianitavarort.github.io/FintaxCongreso/sitemap.xml
+Sitemap: https://congresofintax.com/sitemap.xml

@@ -2,7 +2,7 @@
 
 Landing page del congreso **FINTAX**: dos días de actualización financiera y tributaria con más de 24 expertos nacionales.
 
-🔗 **Sitio en vivo:** https://dianitavarort.github.io/FintaxCongreso/
+🔗 **Sitio en vivo:** https://congresofintax.com/
 
 ## El evento
 
