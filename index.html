@@ -418,7 +418,26 @@
       color: var(--morado);
       line-height: 1;
     }
-    /* Tarjeta de solo flyer (imagen completa, clic = Instagram del ponente) */
+    /* Vista previa del flyer al pasar el cursor (hover) */
+    .flyer-preview {
+      position: fixed;
+      z-index: 250;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity .15s ease;
+      pointer-events: none;
+    }
+    .flyer-preview.visible { visibility: visible; opacity: 1; }
+    .flyer-preview img {
+      display: block;
+      max-width: min(38vw, 430px);
+      max-height: 82vh;
+      border: 3px solid var(--lima);
+      outline: 2px solid var(--negro);
+      border-radius: var(--radio);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, .55);
+    }
+    @media (prefers-reduced-motion: reduce) { .flyer-preview { transition: none; } }
     .speaker-card a.solo-flyer { padding: .7rem; }
     .speaker-card a.solo-flyer img {
       width: 100%;
@@ -998,6 +1017,11 @@
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.597.149-.176.446-.459.867-.597 1.043-.273.422-.42.35-.793.124-.373-.176-1.577-.582-3.001-1.852-1.111-.99-1.859-2.208-2.078-2.581-.218-.373-.023-.575.149-.723.324-.302.446-.497.67-.743.224-.246.298-.422.446-.697.149-.273.074-.512-.075-.76-.149-.248-.668-1.612-.916-2.208-.248-.596-.497-.52-.668-.52-.174 0-.372-.025-.57-.025-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.711.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347Z"/><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.892c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.05 12.05 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.335 11.949-11.892 0-3.176-1.24-6.165-3.48-8.454ZM12.05 21.785h-.004a9.87 9.87 0 0 1-5.036-1.378l-.361-.214-3.741.981.999-3.648-.235-.374a9.86 9.86 0 0 1-1.511-5.26c.002-5.45 4.455-9.885 9.99-9.885 2.663 0 5.166 1.038 7.032 2.923a9.83 9.83 0 0 1 2.913 6.965c-.003 5.45-4.456 9.885-9.846 9.885Z"/></svg>
   </a>
 
+  <!-- Vista previa de flyer (hover) -->
+  <div class="flyer-preview" id="flyer-preview" aria-hidden="true">
+    <img src="" alt="">
+  </div>
+
   <script>
     // Animación de aparición al hacer scroll (respeta prefers-reduced-motion vía CSS)
     (function () {
@@ -1015,6 +1039,36 @@
         });
       }, { threshold: 0.12 });
       elementos.forEach(function (el) { io.observe(el); });
+    })();
+
+    // Vista previa del flyer al pasar el cursor: se muestra en grande junto a la tarjeta;
+    // el clic sigue abriendo el Instagram del ponente.
+    (function () {
+      var prev = document.getElementById('flyer-preview');
+      var img = prev ? prev.querySelector('img') : null;
+      if (!prev || !img) { return; }
+
+      document.querySelectorAll('a.solo-flyer').forEach(function (a) {
+        a.addEventListener('mouseenter', function () {
+          var mini = a.querySelector('img');
+          if (!mini) { return; }
+          img.src = mini.src;
+          img.alt = mini.alt;
+          prev.classList.add('visible');
+
+          // Posicionar junto a la tarjeta (a la derecha si hay espacio, si no a la izquierda)
+          var r = a.getBoundingClientRect();
+          var pw = prev.offsetWidth, ph = prev.offsetHeight;
+          var x = r.right + 18;
+          if (x + pw > window.innerWidth - 12) { x = r.left - pw - 18; }
+          if (x < 12) { x = Math.max(12, (window.innerWidth - pw) / 2); }
+          var y = r.top + (r.height - ph) / 2;
+          y = Math.max(12, Math.min(y, window.innerHeight - ph - 12));
+          prev.style.left = x + 'px';
+          prev.style.top = y + 'px';
+        });
+        a.addEventListener('mouseleave', function () { prev.classList.remove('visible'); });
+      });
     })();
   </script>
 </body>
