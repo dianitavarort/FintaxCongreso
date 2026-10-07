@@ -1048,8 +1048,19 @@
       var img = prev ? prev.querySelector('img') : null;
       if (!prev || !img) { return; }
 
+      // Desactivado en pantallas táctiles / sin hover (celulares y tablets)
+      var esTactil = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+      var huboTouch = false;
+      window.addEventListener('touchstart', function alTocar() {
+        huboTouch = true;
+        prev.classList.remove('visible');
+        window.removeEventListener('touchstart', alTocar);
+      }, { passive: true });
+      if (esTactil) { return; }
+
       document.querySelectorAll('a.solo-flyer').forEach(function (a) {
         a.addEventListener('mouseenter', function () {
+          if (huboTouch) { return; }
           var mini = a.querySelector('img');
           if (!mini) { return; }
           img.src = mini.src;
