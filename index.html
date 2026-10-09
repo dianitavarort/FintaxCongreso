@@ -52,7 +52,6 @@
       { "@type": "Person", "name": "Sandra Milena Pabón" },
       { "@type": "Person", "name": "Leider Valencia" },
       { "@type": "Person", "name": "Carlos Guerra" },
-      { "@type": "Person", "name": "Marielena Salcedo" },
       { "@type": "Person", "name": "Anderson Mora" },
       { "@type": "Person", "name": "Katherin Diaz" },
       { "@type": "Person", "name": "Jorge Buitrago" },
@@ -547,6 +546,56 @@
     .razones p { font-size: .88rem; color: rgba(255, 255, 255, .8); }
     .precio-nota { font-size: .88rem; color: rgba(255, 255, 255, .65); margin-top: 1.4rem; }
 
+    /* ============ Organizadores ============ */
+    .org-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 1.2rem;
+      text-align: center;
+    }
+    .org-card {
+      background: var(--blanco);
+      border: 2px solid var(--negro);
+      border-radius: var(--radio);
+      box-shadow: 5px 5px 0 var(--morado);
+      padding: 1.4rem 1rem 1.2rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .org-card img {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--lima);
+      outline: 2px solid var(--negro);
+      margin-bottom: .7rem;
+    }
+    .org-card h3 { font-size: .98rem; font-weight: 800; line-height: 1.25; }
+    .org-card .handle {
+      display: block;
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--morado);
+      margin-top: .35rem;
+      overflow-wrap: anywhere;
+    }
+    .org-banner {
+      margin-top: 2.2rem;
+      text-align: center;
+    }
+    .org-banner img.logo-lexacty {
+      width: min(320px, 80%);
+      height: auto;
+      display: block;
+      margin: 0 auto 1rem;
+      border-radius: var(--radio);
+    }
+    .org-banner p { font-size: 1.02rem; line-height: 1.55; color: rgba(255, 255, 255, .92); max-width: 62ch; margin: 0 auto; }
+    .org-banner a { color: var(--lima); font-weight: 800; }
+
     /* ============ Contacto ============ */
     .seccion-lima { background: var(--lima); color: var(--negro); text-align: center; }
     .seccion-lima .seccion-tag { background: var(--negro); color: var(--lima); }
@@ -646,6 +695,7 @@
         <a href="#agenda">Agenda</a>
         <a href="#lugar">Lugar</a>
         <a href="#inversion">Inversión</a>
+        <a href="#organizadores">Organizadores</a>
       </nav>
       <a class="btn btn-lima" href="https://wa.me/573177910537?text=Hola%2C%20quiero%20apartar%20mi%20cupo%20para%20el%20Congreso%20FINTAX%202026%20%285%20y%206%20de%20noviembre%2C%20Hotel%20Tonchal%C3%A1%2C%20C%C3%BAcuta%29" target="_blank" rel="noopener">🎟️ Aparta tu cupo</a>
     </div>
@@ -754,14 +804,7 @@
               <span class="handle">@impuestosconbotas</span>
             </a>
           </li>
-          <li class="speaker-card reveal">
-            <a href="https://www.instagram.com/marielenasalcedocontadora/" target="_blank" rel="noopener">
-              <img src="assets/speakers/marielenasalcedocontadora.jpg" alt="Foto de Marielena Salcedo" width="150" height="150" loading="lazy">
-              <h3>Marielena Salcedo</h3>
-              <p class="rol">Tributación y formalización</p>
-              <span class="handle">@marielenasalcedocontadora</span>
-            </a>
-          </li>
+        <!-- Marielena Salcedo pasa a la sección de Organizadores -->
           <li class="speaker-card reveal">
             <a class="solo-flyer" href="https://www.instagram.com/luciatuasesortributario/" target="_blank" rel="noopener" aria-label="Flyer oficial de Tu Asesor Tributario: ver su perfil en Instagram">
               <img src="assets/flyers/lucia-mora.jpg" alt="Flyer oficial de Tu Asesor Tributario, ponente del Congreso FINTAX 2026" loading="lazy">
@@ -953,6 +996,43 @@
 
         <a class="btn btn-grande" href="https://wa.me/573177910537?text=Hola%2C%20quiero%20apartar%20mi%20cupo%20para%20el%20Congreso%20FINTAX%202026%20%285%20y%206%20de%20noviembre%2C%20Hotel%20Tonchal%C3%A1%2C%20C%C3%BAcuta%29" target="_blank" rel="noopener">Quiero mi cupo ahora</a>
         <p class="precio-nota">¿Descuentos por grupos, pagos o facturación? Escríbenos por WhatsApp y te ayudamos. 💬</p>
+      </div>
+    </section>
+
+    <!-- ================= ORGANIZADORES ================= -->
+    <section id="organizadores" class="seccion seccion-morada" aria-labelledby="titulo-organizadores">
+      <div class="contenedor">
+        <p class="seccion-tag">Organizadores</p>
+        <h2 id="titulo-organizadores">Conoce a nuestras organizadoras</h2>
+        <p class="seccion-intro">Detrás del FINTAX hay un equipo de profesionales que creyó en Cúcuta como escenario para el congreso financiero y tributario del nororiente colombiano.</p>
+
+        <ul class="org-grid" style="list-style:none; padding:0; margin:0;">
+          <li class="org-card reveal">
+            <img src="assets/speakers/marielenasalcedocontadora.jpg" alt="Foto de Marielena Salcedo" width="96" height="96" loading="lazy">
+            <h3>Marielena Salcedo</h3>
+            <a class="handle" href="https://www.instagram.com/marielenasalcedocontadora/" target="_blank" rel="noopener">@marielenasalcedocontadora</a>
+          </li>
+          <li class="org-card reveal">
+            <img src="assets/speakers/audreyrodriguezcontadora.jpg" alt="Foto de Audrey Rodríguez" width="96" height="96" loading="lazy">
+            <h3>Audrey Rodríguez</h3>
+            <a class="handle" href="https://www.instagram.com/audreyrodriguezcontadora/" target="_blank" rel="noopener">@audreyrodriguezcontadora</a>
+          </li>
+          <li class="org-card reveal">
+            <img src="assets/speakers/luciatuasesortributario.jpg" alt="Foto de Lucia Mora" width="96" height="96" loading="lazy">
+            <h3>Lucia Mora</h3>
+            <a class="handle" href="https://www.instagram.com/luciatuasesortributario/" target="_blank" rel="noopener">@luciatuasesortributario</a>
+          </li>
+          <li class="org-card reveal">
+            <img src="assets/speakers/sandrapaboncontadora.jpg" alt="Foto de Sandra Pabón" width="96" height="96" loading="lazy">
+            <h3>Sandra Pabón</h3>
+            <a class="handle" href="https://www.instagram.com/sandrapaboncontadora/" target="_blank" rel="noopener">@sandrapaboncontadora</a>
+          </li>
+        </ul>
+
+        <div class="org-banner reveal">
+          <img class="logo-lexacty" src="assets/logo-lexacty.jpg" alt="Logo de Lexacty SAS, organizadora del Congreso FINTAX 2026" width="480" loading="lazy">
+          <p>El FINTAX es un proyecto <strong>organizado por Lexacty SAS</strong>, en alianza con estas cuatro profesionales de la contaduría y el derecho tributario. Conoce más de la organización en <a href="https://www.instagram.com/lexactysas/" target="_blank" rel="noopener">@lexactysas</a> o escríbenos por WhatsApp.</p>
+        </div>
       </div>
     </section>
 
