@@ -210,6 +210,33 @@
     .btn-lima:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--negro); }
     .btn-lima:active { transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--negro); }
 
+    /* ============ Contador regresivo ============ */
+    .countdown {
+      background: var(--negro);
+      border-top: 2px solid rgba(241, 255, 46, .35);
+      padding: .45rem 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: center;
+      gap: .15rem .6rem;
+      font-weight: 800;
+      font-size: .88rem;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: rgba(255, 255, 255, .85);
+      text-align: center;
+    }
+    .countdown .cd-num {
+      color: var(--lima);
+      font-weight: 900;
+      font-size: 1.04rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .countdown .cd-sep { color: rgba(241, 255, 46, .5); }
+    .countdown .cd-fin { color: var(--lima); font-weight: 900; }
+    .no-js .countdown { display: none; }
+
     /* ============ Hero ============ */
     .hero {
       background:
@@ -700,6 +727,16 @@
       </nav>
       <a class="btn btn-lima" href="https://wa.me/573177910537?text=Hola%2C%20quiero%20apartar%20mi%20cupo%20para%20el%20Congreso%20FINTAX%202026%20%285%20y%206%20de%20noviembre%2C%20Hotel%20Tonchal%C3%A1%2C%20C%C3%BAcuta%29" target="_blank" rel="noopener">🎟️ Aparta tu cupo</a>
     </div>
+    <div class="countdown" id="countdown" role="timer" aria-label="Tiempo restante para el inicio del congreso FINTAX 2026">
+      <span aria-hidden="true">⏳ Faltan para el FINTAX:</span>
+      <span><span class="cd-num" id="cd-dias">14</span> días</span>
+      <span class="cd-sep" aria-hidden="true">✦</span>
+      <span><span class="cd-num" id="cd-horas">00</span> horas</span>
+      <span class="cd-sep" aria-hidden="true">✦</span>
+      <span><span class="cd-num" id="cd-min">00</span> min</span>
+      <span class="cd-sep" aria-hidden="true">✦</span>
+      <span><span class="cd-num" id="cd-seg">00</span> seg</span>
+    </div>
   </header>
 
   <main id="contenido">
@@ -1098,6 +1135,37 @@
         });
       }, { threshold: 0.12 });
       elementos.forEach(function (el) { io.observe(el); });
+    })();
+
+    // Contador regresivo: días, horas, minutos y segundos hasta el inicio del
+    // congreso (5 de noviembre de 2026, 8:00 a.m., hora de Colombia, UTC-5).
+    (function () {
+      var inicio = new Date('2026-11-05T08:00:00-05:00').getTime();
+      var franja = document.getElementById('countdown');
+      var elDias = document.getElementById('cd-dias');
+      var elHoras = document.getElementById('cd-horas');
+      var elMin = document.getElementById('cd-min');
+      var elSeg = document.getElementById('cd-seg');
+      if (!franja || !elDias || !elHoras || !elMin || !elSeg) { return; }
+
+      function dosDigitos(n) { return n < 10 ? '0' + n : String(n); }
+
+      function actualizar() {
+        var restante = inicio - Date.now();
+        if (restante <= 0) {
+          franja.innerHTML = '<span class="cd-fin">🎉 ¡Ya comenzó el FINTAX!</span>';
+          clearInterval(temporizador);
+          return;
+        }
+        var s = Math.floor(restante / 1000);
+        elDias.textContent = Math.floor(s / 86400);
+        elHoras.textContent = dosDigitos(Math.floor(s % 86400 / 3600));
+        elMin.textContent = dosDigitos(Math.floor(s % 3600 / 60));
+        elSeg.textContent = dosDigitos(s % 60);
+      }
+
+      actualizar();
+      var temporizador = setInterval(actualizar, 1000);
     })();
 
     // Vista previa del flyer al pasar el cursor: se muestra en grande junto a la tarjeta;
